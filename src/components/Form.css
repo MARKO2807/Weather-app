@@ -1,0 +1,103 @@
+.title-div {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 10px;
+  color: #000;
+  gap: 5px;
+}
+.title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+  padding: 10px;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: all 0.75s ease;
+}
+
+.title:hover {
+  transform: scale(1.1);
+  color: #000000;
+}
+
+.celsius-icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  transition: transform 1s ease-in-out;
+}
+.celsius-icon:hover {
+  transform: rotate(360deg) scale(1.25);
+}
+
+.form {
+  display: flex;
+  gap: 12px;
+  max-width: 400px;
+  margin: 5px auto;
+}
+
+.form input {
+  flex: 1;
+  padding: 12px;
+  font-size: 18px;
+  border: 1.5px solid #060303;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.5);
+  transition: all 0.5s ease-in-out;
+}
+
+.form input:hover {
+  border-color: #000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  background-color: #f9f9f9;
+}
+
+.form input:focus {
+  border-color: #000;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
+.btn-submit {
+  padding: 10px;
+  font-size: 17px;
+  color: white;
+  background-color: #000;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  width: 100px;
+
+  transition:
+    transform 0.3s ease-in-out,
+    opacity 0s ease-in-out;
+}
+
+.btn-submit:hover {
+  background-color: #000;
+  transform: scale(1.075);
+  opacity: 0.9;
+}
+
+.btn-submit:active {
+  transform: scale(1);
+  opacity: 0.8;
+}
+
+.error-msg {
+  font-size: 18px;
+  margin: 20px;
+  font-weight: 700;
+}
+@media (max-width: 500px) {
+  .form {
+    flex-direction: column;
+  }
+
+  .btn-submit {
+    width: 100%;
+  }
+}
