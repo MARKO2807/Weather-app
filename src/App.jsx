@@ -35,8 +35,9 @@ function App() {
       setWeather(response.data);
     } catch (err) {
       const apiMessage = err.response?.data?.message;
-      const formattedMessage = apiMessage
-        ? apiMessage.charAt(0).toUpperCase() +
+      const formattedMessage =
+        apiMessage ?
+          apiMessage.charAt(0).toUpperCase() +
           apiMessage.slice(1).toLowerCase() +
           "."
         : "Something went wrong. Please check your internet connection and try again.";
@@ -44,6 +45,7 @@ function App() {
       setError(formattedMessage);
     } finally {
       setLoading(false);
+      setCity("");
     }
   };
 
